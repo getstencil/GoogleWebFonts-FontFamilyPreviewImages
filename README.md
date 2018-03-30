@@ -4,6 +4,9 @@ This repo contains images that are representations of all the different Google F
 
 We obviously could have loaded the fonts into memory and then shown those, but that didn't seem ideal.
 
+### Screenshot of how our app uses these:
+![](https://i.imgur.com/4bm2ixQ.png)
+
 ### Why are there so many files?
 While Google Fonts currently provides 2,268 different font variations, there are many-more actual images. This is because Google Fonts routinely updates fonts from one version to another (eg. v5 to v6). We then re-render the images to ensure the preview we show our users is accurate.
 
