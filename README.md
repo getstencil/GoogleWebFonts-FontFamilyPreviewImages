@@ -4,7 +4,7 @@ This repo contains images that are representations of all the different Google F
 
 We could have loaded the fonts into memory and then shown those, but that didn't seem ideal.
 
-### Screenshot of how our app uses these:
+### Screenshot of how our app uses the images in this repo:
 ![](https://i.imgur.com/4bm2ixQ.png)
 
 ### Why are there so many files?
