@@ -16,7 +16,7 @@ I've decided to leave those files in the repo for posterity's sake: you never kn
 At the moment, I'm only providing preview images that are exactly `48px` in height. The width respects the native width of the font. To ensure a sharp display, I'd suggest you hardcode the preview thumb at a maximum height of `24px`.
 
 ### Naming convention of files:
-Here's a sample: `ABeeZee-400.v10.png`  
+Two examples: `ABeeZee-400.v10.png` and `Cabin-400italic.v10.png`  
 The format is pretty straight-forward:
 - The font name (non-hyphens, non-alphabetic and non-numeric characters are removed)
 - A dash (`-`)
