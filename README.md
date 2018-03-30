@@ -2,7 +2,7 @@
 
 This repo contains images that are representations of all the different Google Fonts. We needed this for our app [Stencil](https://getstencil.com), since we allow our users to search through Google Fonts (via their API). But we (obviously) wanted/needed to provide them with a preview of what the font looked like.
 
-We obviously could have loaded the fonts into memory and then shown those, but that didn't seem ideal.
+We could have loaded the fonts into memory and then shown those, but that didn't seem ideal.
 
 ### Screenshot of how our app uses these:
 ![](https://i.imgur.com/4bm2ixQ.png)
