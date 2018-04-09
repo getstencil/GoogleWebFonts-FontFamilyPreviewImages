@@ -13,7 +13,7 @@ While Google Fonts currently provides 2,268 different font variations, there are
 I've decided to leave those files in the repo for posterity's sake: you never know what people will need :)
 
 ### Sizes
-At the moment, I'm only providing preview images that are exactly `48px` in height. The width respects the native width of the font. To ensure a sharp display, I'd suggest you hardcode the preview thumb at a maximum height of `24px`.
+At the moment, I'm only providing preview images that have a `font-size` value of `48px`. The width respects the native width of the font. To ensure a sharp display, I'd suggest you hardcode the preview thumb at a maximum height of `24px`.
 
 ### Naming convention of files:
 Two examples: `ABeeZee-400.v10.png` and `Cabin-400italic.v10.png`  
