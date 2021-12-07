@@ -9,6 +9,12 @@ like.
 We could have loaded the fonts into memory and then shown those, but that didn't
 seem ideal.
 
+### Note
+If you're interested in a hosted version of the screenshot you below (allowing
+your users to trigger a modal, and the click-event responding with an event
+that passes in the URL of the `woff2` file), please let me know:
+[onassar@gmail.com](mailto:onassar@gmail.com)
+
 ### Screenshot of how our app uses the images in this repo:
 ![](https://i.imgur.com/4bm2ixQ.png)
 
