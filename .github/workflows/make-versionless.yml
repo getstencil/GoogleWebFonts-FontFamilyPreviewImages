@@ -18,7 +18,6 @@ jobs:
         uses: tj-actions/changed-files@v19
         with:
           since_last_remote_commit: 'true'
-        with:
           files: |
             48px/compressed/*.png
 
