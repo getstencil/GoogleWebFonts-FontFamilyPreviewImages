@@ -14,20 +14,20 @@ jobs:
           fetch-depth: 0
 
       - name: Get added files
-          id: changed-files
-          uses: tj-actions/changed-files@v19
-          with:
-            since_last_remote_commit: 'true'
-            files: |
-              48px/compressed/*.png
+        id: changed-files
+        uses: tj-actions/changed-files@v19
+        with:
+          since_last_remote_commit: 'true'
+          files: |
+            48px/compressed/*.png
 
       - name: Copy previews with versionless
-          run: |
-            for file in ${{ steps.changed-files.outputs.added_files }}; do
-              versionless=$(basename $source | sed -e 's/\.v[[:digit:]]\+\.png$/\.png/')
-              cp "$source" "./preview/$versionless"
-              echo "$file copied with versionless"
-            done
+        run: |
+          for file in ${{ steps.changed-files.outputs.added_files }}; do
+            versionless=$(basename $source | sed -e 's/\.v[[:digit:]]\+\.png$/\.png/')
+            cp "$source" "./preview/$versionless"
+            echo "$file copied with versionless"
+          done
 
       - name: Commit changes
         run: |
