@@ -9,33 +9,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
 
-    - name: Get added files
-        id: changed-files
-        uses: tj-actions/changed-files@v19
-        with:
-          since_last_remote_commit: 'true'
-          files: |
-            48px/compressed/*.png
+      - name: Get added files
+          id: changed-files
+          uses: tj-actions/changed-files@v19
+          with:
+            since_last_remote_commit: 'true'
+            files: |
+              48px/compressed/*.png
 
-    - name: Copy previews with versionless
+      - name: Copy previews with versionless
+          run: |
+            for file in ${{ steps.changed-files.outputs.added_files }}; do
+              versionless=$(basename $source | sed -e 's/\.v[[:digit:]]\+\.png$/\.png/')
+              cp "$source" "./preview/$versionless"
+              echo "$file copied with versionless"
+            done
+
+      - name: Commit changes
         run: |
-          for file in ${{ steps.changed-files.outputs.added_files }}; do
-            versionless=$(basename $source | sed -e 's/\.v[[:digit:]]\+\.png$/\.png/')
-            cp "$source" "./preview/$versionless"
-            echo "$file copied with versionless"
-          done
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Remove preview versions after push" -a
 
-    - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Remove preview versions after push" -a
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
